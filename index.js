@@ -13,7 +13,7 @@ const file_data = path.join(__dirname, 'data.json')
 // Italy    27
 // USA       1
 
-function getNewsForQuery(query) {
+getNewsForQuery = (query) => {
     gNews.stream(query, (stream) => {
         stream.on(GoogleNews.DATA, (data) => {
             return console.log(data.title)
